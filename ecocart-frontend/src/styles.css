@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-primary: oklch(59.49% 0.1035 133.69);
+  --color-secondary: oklch(86.84% 0.034 51.2);
+
+  --color-info: ;
+  --color-success: ;
+  --color-warning: ;
+  --color-error: ;
+
+  --color-background: var(--color-grey-50);
+  --color-foreground: ;
+  --color-primary-foreground: var(--color-slate-200);
+  --color-card: ;
+  --color-card-foreground: ;
+  --color-muted: ;
+  --color-muted-foreground: ;
+
+  /* font-family */
+  --font-libre-baskerville: "Libre Baskerville", serif; /* headings */
+  --font-inter: "Inter", serif; /* body */
+
+  /* font-sizes-body */
+  --text-lg: 20px;
+  --text-lg--line-height: 28px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-2xs: 10px;
+  --text-2xs--line-height: 14px;
+
+  /* breakpoints */
+  /* --breakpoint-sm: 340px;
+  --breakpoint-md: 540px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1180px; */
+}
+
+@utility container {
+  @apply p-3 lg:p-8 mx-auto;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+html {
+  @apply overflow-x-hidden scroll-smooth;
+}
+.section {
+  @apply mt-20 lg:mt-28;
+}
+
+h1 {
+  font-size: 56px;
+  @apply font-libre-baskerville font-bold;
+}
+h2 {
+  font-size: 48px;
+  @apply font-libre-baskerville font-bold;
+}
+h3 {
+  font-size: 40px;
+  @apply font-libre-baskerville font-bold;
+}
+h4 {
+  font-size: 32px;
+  @apply font-libre-baskerville font-bold;
+}
+h5 {
+  font-size: 24px;
+  @apply font-libre-baskerville font-bold;
+}
+h6 {
+  font-size: 20px;
+  @apply font-libre-baskerville font-bold;
+}
+
+/* Utility classes */
+
+html {
+  @apply overflow-x-hidden scroll-smooth;
+}
+.section {
+  @apply mt-20 lg:mt-28;
+}
+/* 
+h1 {
+  @apply text-3xl md:text-4xl xl:text-5xl font-bold;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl xl:text-4xl;
+}
+
+h3 {
+  @apply text-xl md:text-2xl xl:text-3xl;
+} */
+
+a {
+  @apply text-card-foreground;
+}
+
+strong {
+  @apply text-primary;
+}
+
+.btn {
+  @apply text-primary-foreground border border-primary bg-primary rounded-md px-5 py-2 transition-all duration-300;
+}
+
+.btn span {
+  @apply font-bold;
+}
+
+.btn:hover {
+  @apply opacity-90 -translate-y-1;
+}
+
+.btn_outline {
+  @apply bg-transparent text-foreground;
+}
+
+.btn_outline:hover {
+  @apply bg-primary text-primary-foreground;
+}
+
+.title {
+  @apply font-inter text-primary;
+}
+
+/* scroll bar */
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  outline: 1px solid var(--color-primary);
+}
