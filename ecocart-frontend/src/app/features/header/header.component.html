@@ -1,0 +1,67 @@
+<div class="banner w-full py-3 bg-primary flex items-center justify-center">
+  <p class="banner__text text-xs font-semibold text-foreground">
+    Free Shipping with minimum purchase Rs.250
+  </p>
+</div>
+
+<header class="header container">
+  <div class="flex flex-col gap-6">
+    <!-- main header -->
+    <div class="flex items-center justify-between">
+      <div class="logo">
+        <img
+          src="/img/logo.svg"
+          alt="logo of ecocart"
+          class="aspect-[5/2] h-6"
+        />
+      </div>
+      <nav class="flex items-center gap-2">
+        <a href="#">
+          <i class="ri-user-3-line"></i>
+        </a>
+        <a href="#">
+          <i class="ri-shopping-bag-4-line"></i>
+        </a>
+      </nav>
+    </div>
+    <!-- search header -->
+    <div class="flex items-center justify-between gap-3">
+      <div
+        class="border-2 border-border rounded-[40px] flex items-center gap-2 py-2 px-3 w-9/10"
+      >
+        <i class="ri-search-line text-gray-400"></i>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search here... "
+          class="outline-none w-full text-xs"
+        />
+      </div>
+      <button (click)="toggleMobileMenu()">
+        <i #hamburger class="ri-menu-fill"></i>
+      </button>
+    </div>
+
+    <!--mobile menu -->
+    <div class="mobile__navigation bg-background" *ngIf="isMenuVisible()">
+      <ul>
+        <li class="mobile__navigation-item">
+          <a href="#" class="mobile__navigation-link">Home</a>
+        </li>
+        <li class="mobile__navigation-item">
+          <a href="#" class="mobile__navigation-link">About</a>
+        </li>
+        <li class="mobile__navigation-item">
+          <a href="#" class="mobile__navigation-link">Shop</a>
+        </li>
+        <li class="mobile__navigation-item">
+          <a href="#" class="mobile__navigation-link">Blog</a>
+        </li>
+        <li class="mobile__navigation-item">
+          <a href="#" class="mobile__navigation-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

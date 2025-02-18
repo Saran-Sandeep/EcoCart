@@ -11,13 +11,14 @@
   --color-warning: ;
   --color-error: ;
 
-  --color-background: var(--color-grey-50);
-  --color-foreground: ;
+  --color-background: var(--color-slate-50);
+  --color-foreground: var(--color-slate-200);
   --color-primary-foreground: var(--color-slate-200);
   --color-card: ;
   --color-card-foreground: ;
   --color-muted: ;
   --color-muted-foreground: ;
+  --color-border: var(--color-gray-200);
 
   /* font-family */
   --font-libre-baskerville: "Libre Baskerville", serif; /* headings */
@@ -43,7 +44,7 @@
 }
 
 @utility container {
-  @apply p-3 lg:p-8 mx-auto;
+  @apply p-4 lg:p-8 mx-auto;
 }
 
 @layer base {
@@ -55,6 +56,10 @@
 
 html {
   @apply overflow-x-hidden scroll-smooth;
+}
+
+body {
+  @apply bg-background;
 }
 .section {
   @apply mt-20 lg:mt-28;
@@ -92,6 +97,10 @@ html {
 }
 .section {
   @apply mt-20 lg:mt-28;
+}
+
+i {
+  @apply text-2xl;
 }
 /* 
 h1 {
@@ -139,7 +148,7 @@ strong {
 }
 
 /* scroll bar */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 1em;
 }
 
@@ -150,4 +159,4 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
   outline: 1px solid var(--color-primary);
-}
+} */
