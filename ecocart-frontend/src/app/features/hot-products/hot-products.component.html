@@ -81,7 +81,9 @@
     class="overflow-hidden lg:cursor-grab"
   >
     @for(product of newArrivalProducts; track product.id) {
-    <swiper-slide class="flex flex-col items-start gap-4 h-full">
+    <swiper-slide
+      class="flex flex-col items-center md:items-start gap-4 h-full"
+    >
       <img
         [src]="product.imageUrls[0]"
         [alt]="product.name"
