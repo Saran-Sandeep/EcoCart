@@ -1,0 +1,110 @@
+<div class="most-wanted-products">
+  <div
+    class="container bg-secondary flex flex-col items-center gap-6 py-10 md:bg-primary"
+  >
+    <div class="text-center">
+      <h4
+        class="text-gray-600 text-heading-4 md:text-heading-2 md:text-foreground"
+      >
+        Our Most Wanted <br />
+        Products
+      </h4>
+      <p class="text-small text-gray-500 md:text-lg md:text-gray-100">
+        Good for environment, good for you
+      </p>
+    </div>
+    <div
+      class="most-wanted-products__cards grid grid-cols-2 gap-4 md:grid-cols-4"
+    >
+      @for(product of mostWantedProducts; track product.id) {
+      <div class="most-wanted-products__card flex flex-col gap-4">
+        <img
+          [src]="product.imageUrls[0]"
+          [alt]="product.name"
+          class="rounded-lg aspect-square w-full"
+        />
+        <p
+          class="text-small flex-1 px-2 font-semibold text-gray-600 line-clamp-2 md:text-lg md:text-slate-200"
+        >
+          {{ product.name }}
+        </p>
+        <div class="px-2 items-end">
+          <p
+            class="text-sm text-primary font-semibold md:text-secondary md:text-lg"
+          >
+            {{ product.discountPrice | currency : product.currency }}
+          </p>
+          <p
+            class="text-sm line-through text-gray-400 md:text-gray-100 md:text-lg"
+          >
+            {{ product.price | currency : product.currency }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+<div class="new-arrivals container py-10 space-y-6">
+  <div class="new-arrivals__header lg:flex items-center justify-between">
+    <div class="new-arrivals__heading space-y-1">
+      <h3 class="text-heading-5 text-gray-600 lg:text-heading-3">
+        New Arrivals
+      </h3>
+      <p class="text-xs text-gray-500 lg:text-base">
+        Be the first to have the first-class product
+      </p>
+    </div>
+    <div class="new-arrivals__nav hidden lg:flex lg:items-center lg:gap-4">
+      <button
+        #leftNav
+        class="new-arrival__nav--left rounded-5xl bg-secondary p-2 size-10 flex items-center justify-center transition-colors hover:bg-primary group"
+      >
+        <i
+          class="ri-arrow-left-line text-gray-600 transition-colors group-hover:text-primary-foreground"
+        ></i>
+      </button>
+      <button
+        #rightNav
+        class="new-arrival__nav--right rounded-5xl bg-secondary p-2 size-10 flex items-center justify-center transition-colors hover:bg-primary group"
+      >
+        <i
+          class="ri-arrow-right-line text-gray-600 transition-colors group-hover:text-primary-foreground"
+        ></i>
+      </button>
+    </div>
+  </div>
+
+  <swiper-container
+    #swiperEle
+    init="false"
+    class="overflow-hidden lg:cursor-grab"
+  >
+    @for(product of newArrivalProducts; track product.id) {
+    <swiper-slide class="flex flex-col items-start gap-4 h-full">
+      <img
+        [src]="product.imageUrls[0]"
+        [alt]="product.name"
+        class="rounded-lg size-45 align-center lg:size-78"
+      />
+      <p
+        class="text-small flex-1 px-2 font-semibold text-gray-600 line-clamp-1 md:text-lg md:px-4"
+      >
+        {{ product.name }}
+      </p>
+      <div class="px-2 justify-end md:px-4">
+        <p class="text-sm text-primary font-semibold md:text-lg">
+          {{ product.discountPrice | currency : product.currency }}
+        </p>
+        <p class="text-sm line-through text-gray-400 md:text-lg">
+          {{ product.price | currency : product.currency }}
+        </p>
+      </div>
+    </swiper-slide>
+    }
+  </swiper-container>
+
+  <div class="flex justify-center items-center py-6">
+    <button class="btn">See More</button>
+  </div>
+</div>
