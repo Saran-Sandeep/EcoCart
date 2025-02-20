@@ -6,10 +6,10 @@
   --color-primary: oklch(59.49% 0.1035 133.69);
   --color-secondary: oklch(86.84% 0.034 51.2);
 
-  --color-info: ;
+  /* --color-info: ;
   --color-success: ;
   --color-warning: ;
-  --color-error: ;
+  --color-error: ; */
 
   --color-background: var(--color-slate-50);
   --color-foreground: var(--color-slate-200);
@@ -35,6 +35,25 @@
   --text-xs--line-height: 16px;
   --text-2xs: 10px;
   --text-2xs--line-height: 14px;
+
+  /* font-sizes-headings */
+  --text-heading-1: 56px;
+  --text-heading-1--font-weight: bold;
+
+  --text-heading-2: 48px;
+  --text-heading-2--font-weight: bold;
+
+  --text-heading-3: 40px;
+  --text-heading-3--font-weight: bold;
+
+  --text-heading-4: 32px;
+  --text-heading-4--font-weight: bold;
+
+  --text-heading-5: 24px;
+  --text-heading-5--font-weight: bold;
+
+  --text-heading-6: 20px;
+  --text-heading-6--font-weight: bold;
 
   /* breakpoints */
   /* --breakpoint-sm: 340px;
@@ -69,28 +88,22 @@ body {
 }
 
 h1 {
-  font-size: 56px;
-  @apply font-libre-baskerville font-bold;
+  @apply font-libre-baskerville;
 }
 h2 {
-  font-size: 48px;
-  @apply font-libre-baskerville font-bold;
+  @apply font-libre-baskerville;
 }
 h3 {
-  font-size: 40px;
-  @apply font-libre-baskerville font-bold;
+  @apply font-libre-baskerville;
 }
 h4 {
-  font-size: 32px;
-  @apply font-libre-baskerville font-bold;
+  @apply font-libre-baskerville;
 }
 h5 {
-  font-size: 24px;
-  @apply font-libre-baskerville font-bold;
+  @apply font-libre-baskerville;
 }
 h6 {
-  font-size: 20px;
-  @apply font-libre-baskerville font-bold;
+  @apply font-libre-baskerville;
 }
 
 /* Utility classes */
