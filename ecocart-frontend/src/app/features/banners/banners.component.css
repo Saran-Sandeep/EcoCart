@@ -1,0 +1,35 @@
+.we-exist__content {
+  @apply w-9/10;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 1) 20%,
+    rgba(0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.we-exist__item-1 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 1) * -1);
+}
+.we-exist__item-2 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 2) * -1);
+}
+.we-exist__item-3 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 3) * -1);
+}
+.we-exist__item-4 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 4) * -1);
+}
+.we-exist__item-5 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 5) * -1);
+}
+.we-exist__item-6 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 6) * -1);
+}
+.we-exist__item-7 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 7) * -1);
+}
+.we-exist__item-8 {
+  animation-delay: calc(var(--animation-marquee-duration) / 8 * (8 - 8) * -1);
+}

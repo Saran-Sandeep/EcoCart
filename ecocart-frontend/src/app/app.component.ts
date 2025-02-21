@@ -4,6 +4,7 @@ import { HeaderComponent } from './features/header/header.component';
 import { HeroComponent } from './features/hero/hero.component';
 import { CategoryHighlightComponent } from './features/category-highlight/category-highlight.component';
 import { HotProductsComponent } from './features/hot-products/hot-products.component';
+import { BannersComponent } from './features/banners/banners.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { HotProductsComponent } from './features/hot-products/hot-products.compo
     HeroComponent,
     CategoryHighlightComponent,
     HotProductsComponent,
+    BannersComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
