@@ -18,7 +18,7 @@
   --color-card-foreground: ;
   --color-muted: ;
   --color-muted-foreground: ;
-  --color-border: var(--color-gray-200);
+  --color-border: var(--color-gray-400);
 
   /* font-family */
   --font-libre-baskerville: "Libre Baskerville", serif; /* headings */
