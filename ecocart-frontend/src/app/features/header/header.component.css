@@ -1,9 +1,13 @@
 @reference "../../../styles.css";
 
-.mobile__navigation-link {
+.mobile-navigation-link {
   @apply text-center block py-2 transition-all duration-300 rounded-md;
 }
 
-.mobile__navigation-item:hover .mobile__navigation-link {
+.mobile-navigation-item:hover .mobile-navigation-link {
+  @apply bg-primary text-primary-foreground;
+}
+
+.header__navigation-item:hover {
   @apply bg-primary text-primary-foreground;
 }
